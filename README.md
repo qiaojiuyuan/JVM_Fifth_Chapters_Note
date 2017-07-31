@@ -1,6 +1,7 @@
 # 深入理解Java虚拟机 JVM高级特性与最佳实践
 # 第五章 类文件结构
 ## Class类文件的结构
+![](https://github.com/qiaojiuyuan/JVM_Fifth_Chapters_Note/raw/master/img/class_file_format.png)
 ```
 Class文件是一组以8位字节为基础单位的二进制流，各个数据项目严格按照顺序紧凑地排列在Class文件之中，中间
 没有添加任何分隔符，这使得整个Class文件中存储的内容几乎全部是程序运行的必要数据，没有空隙存在。当遇到
@@ -35,6 +36,7 @@ Class文件的魔数很有"浪漫气息"，值为:0xCAFEBABE,很像咖啡宝贝�
 Java的版本号是从45开始的。高版本的JDK能向下兼容以前的版本，但不向上兼容。
 ```
 * 常量池
+![](https://github.com/qiaojiuyuan/JVM_Fifth_Chapters_Note/raw/master/img/constant_table.png)
 ```
 紧接着主次版本号之后的第9字节是常量池入口，常量池可以理解为Class文件之中的资源仓库，它是Class文件结构中
 与其它项目关联最多的数据类型，也是占用Class文件空间最大的数据项目之一，同时它还是在Class文件中第一个
